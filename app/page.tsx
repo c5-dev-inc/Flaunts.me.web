@@ -1,5 +1,4 @@
 import Image from 'next/image';
-import Link from 'next/link';
 
 export default function Home() {
   return (
@@ -14,43 +13,38 @@ export default function Home() {
             height={40}
             className="rounded-xl"
           />
-          
         </div>
-        <div className="flex gap-4">
-          <a 
-            href="https://c5-dev.com" 
-            target="_blank"
-            className="text-gray-300 hover:text-white transition"
-          >
-            C5-DEV
-          </a>
-        </div>
+        <a 
+          href="https://c5-dev.com" 
+          target="_blank"
+          className="text-gray-300 hover:text-white transition"
+        >
+          C5-DEV
+        </a>
       </nav>
 
       {/* Hero Section */}
-      <main className="max-w-6xl mx-auto px-6 py-16 md:py-24">
+      <main className="max-w-4xl mx-auto px-6 py-16 md:py-24">
         <div className="text-center">
-          <div className="flex justify-center mb-8">
-            <Image 
-              src="/logo.png" 
-              alt="Flaunts.me" 
-              width={96} 
-              height={96}
-              className="rounded-2xl"
-            />
-          </div>
+          <Image 
+            src="/logo.png" 
+            alt="Flaunts.me" 
+            width={80} 
+            height={80}
+            className="rounded-2xl mx-auto mb-6"
+          />
           
-          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+          <h1 className="text-5xl md:text-6xl font-bold text-white mb-4">
             flaunts.me
           </h1>
-          <p className="text-xl md:text-2xl text-purple-300 mb-4">
+          <p className="text-xl text-purple-300 mb-3">
             Your link-in-bio page. Free. Forever.
           </p>
-          <p className="text-gray-400 text-lg max-w-2xl mx-auto mb-12">
-            One URL. All your links. Instagram, TikTok, Twitter, YouTube — put everything in one place.
+          <p className="text-gray-400 text-base max-w-xl mx-auto mb-10">
+            Sign up in the C5-DEV app and claim your free flaunts.me page. Download now — it's free forever.
           </p>
 
-          {/* Download Buttons */}
+          {/* Both App Store & Google Play buttons - ONLY HERE */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
             <a 
               href="https://apps.apple.com/app/c5-dev/id6760923929" 
@@ -74,86 +68,57 @@ export default function Home() {
             </a>
           </div>
 
-          {/* Preview Image Placeholder */}
-          <div className="max-w-md mx-auto bg-gray-900 rounded-3xl p-4 border border-purple-800">
-            <div className="bg-gradient-to-b from-purple-900 to-black rounded-2xl p-6">
-              <div className="flex items-center gap-3 mb-6">
-                <div className="w-12 h-12 bg-purple-600 rounded-full"></div>
+          {/* Phone Mockup Preview */}
+          <div className="max-w-xs mx-auto bg-gray-900 rounded-3xl p-3 border border-purple-800">
+            <div className="bg-gradient-to-b from-purple-900 to-black rounded-2xl p-5">
+              <div className="flex items-center gap-3 mb-5">
+                <div className="w-10 h-10 bg-purple-600 rounded-full"></div>
                 <div>
-                  <div className="h-4 w-24 bg-purple-400 rounded mb-2"></div>
-                  <div className="h-3 w-32 bg-gray-600 rounded"></div>
+                  <div className="h-3 w-20 bg-purple-400 rounded mb-1"></div>
+                  <div className="h-2 w-24 bg-gray-600 rounded"></div>
                 </div>
               </div>
-              <div className="space-y-3">
-                <div className="h-12 bg-purple-600 rounded-xl"></div>
-                <div className="h-12 bg-purple-600/80 rounded-xl"></div>
-                <div className="h-12 bg-purple-600/60 rounded-xl"></div>
-                <div className="h-12 bg-purple-600/40 rounded-xl"></div>
+              <div className="space-y-2">
+                <div className="h-10 bg-purple-600 rounded-lg"></div>
+                <div className="h-10 bg-purple-600/70 rounded-lg"></div>
+                <div className="h-10 bg-purple-600/40 rounded-lg"></div>
               </div>
             </div>
-            <p className="text-center text-gray-400 text-sm mt-4">flaunts.me/@yourname</p>
+            <p className="text-center text-gray-500 text-xs mt-3">flaunts.me/@yourname</p>
           </div>
         </div>
 
-        {/* Features */}
-        <div className="grid md:grid-cols-3 gap-8 mt-24">
+        {/* Features - Simple icons only */}
+        <div className="flex justify-center gap-12 mt-20">
           <div className="text-center">
-            <div className="w-16 h-16 bg-purple-600/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
-              <svg className="w-8 h-8 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div className="w-12 h-12 bg-purple-600/20 rounded-xl flex items-center justify-center mx-auto mb-2">
+              <svg className="w-6 h-6 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.102m3.172-3.172a4 4 0 015.656 0l4 4a4 4 0 01-5.656 5.656l-1.102-1.102" />
               </svg>
             </div>
-            <h3 className="text-white font-semibold text-lg mb-2">All Your Links</h3>
-            <p className="text-gray-400">Instagram, TikTok, Twitter, YouTube, Website — add unlimited links</p>
+            <p className="text-gray-400 text-xs">Unlimited Links</p>
           </div>
           <div className="text-center">
-            <div className="w-16 h-16 bg-purple-600/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
-              <svg className="w-8 h-8 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div className="w-12 h-12 bg-purple-600/20 rounded-xl flex items-center justify-center mx-auto mb-2">
+              <svg className="w-6 h-6 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
               </svg>
             </div>
-            <h3 className="text-white font-semibold text-lg mb-2">Free Forever</h3>
-            <p className="text-gray-400">No hidden fees. No subscriptions. Completely free.</p>
+            <p className="text-gray-400 text-xs">100% Free</p>
           </div>
           <div className="text-center">
-            <div className="w-16 h-16 bg-purple-600/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
-              <svg className="w-8 h-8 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div className="w-12 h-12 bg-purple-600/20 rounded-xl flex items-center justify-center mx-auto mb-2">
+              <svg className="w-6 h-6 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
               </svg>
             </div>
-            <h3 className="text-white font-semibold text-lg mb-2">Made for Creators</h3>
-            <p className="text-gray-400">Clean, mobile-friendly pages that make you look professional</p>
-          </div>
-        </div>
-
-        {/* CTA Section */}
-        <div className="text-center mt-24 py-12 border-t border-purple-800">
-          <h2 className="text-3xl font-bold text-white mb-4">Get Your flaunts.me URL Today</h2>
-          <p className="text-gray-400 mb-8">Download the C5-DEV app and claim your free link-in-bio page</p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a 
-              href="https://apps.apple.com/app/c5-dev/id6760923929" 
-              target="_blank"
-              className="bg-purple-600 text-white px-8 py-3 rounded-xl font-semibold hover:bg-purple-700 transition"
-            >
-              Download for iOS
-            </a>
-            <a 
-              href="https://play.google.com/store/apps/details?id=com.c5_dev.chat5" 
-              target="_blank"
-              className="bg-gray-800 text-white px-8 py-3 rounded-xl font-semibold hover:bg-gray-700 transition"
-            >
-              Download for Android
-            </a>
+            <p className="text-gray-400 text-xs">For Creators</p>
           </div>
         </div>
 
         {/* Footer */}
-        <footer className="text-center text-gray-500 text-sm py-8 border-t border-gray-800 mt-16">
+        <footer className="text-center text-gray-600 text-sm pt-12 mt-12 border-t border-gray-800">
           <p>© 2026 flaunts.me — A C5-DEV product</p>
-          <p className="mt-2">
-            <a href="https://c5-dev.com" target="_blank" className="hover:text-purple-400">C5-DEV</a>
-          </p>
         </footer>
       </main>
     </div>
